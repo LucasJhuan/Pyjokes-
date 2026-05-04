@@ -1,2 +1,2 @@
 # Pyjokes-
-Pyjkes trabalho lucas BUIM
+Pyjokes trabalho lucas BUIM

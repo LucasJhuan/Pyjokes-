@@ -1,5 +1,6 @@
 # Pyjokes-
 Pyjokes trabalho lucas BUIM
+Pyjokes Retorna piadas de programação. Guardar as favoritas em uma lista. Botão 'Me faça rir' que muda o texto da janela. GRUPO 09
 
 https://docs.python.org/3/library/tkinter.html
 

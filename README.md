@@ -6,6 +6,7 @@ Documento biblioteca tkinter
 https://docs.python.org/3/library/tkinter.html
 
 
+Documento biblioteca pyjokes 
 https://pypi.org/project/pyjokes/
 
 Código

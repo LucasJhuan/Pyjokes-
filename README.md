@@ -1,6 +1,12 @@
 # Pyjokes-
-Pyjokes trabalho lucas BUIM
-Pyjokes Retorna piadas de programação. Guardar as favoritas em uma lista. Botão 'Me faça rir' que muda o texto da janela. GRUPO 09
+Pyjokes trabalho Lucas, Thiago, Amanda GRUPO 09
+Pyjokes Retorna piadas de programação.
+
+Oq fazer
+-Guardar as favoritas em uma lista/matriz.
+-Botão 'Me faça rir' que muda o texto da janela.
+-Botão de favoritar piadas
+-Botão mostrar favoritos
 
 Documento biblioteca tkinter
 https://docs.python.org/3/library/tkinter.html

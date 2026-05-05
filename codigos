@@ -1,2 +1,19 @@
-#nome do codigo
+#-Botão de favoritar piadas -Botão mostrar favoritos
+import pyjokes as pj
+import tkinter as tk
+from tkinter import *
+from tkinter import ttk
 
+
+janela = tk.Tk()
+
+janela.title('Risada Simulator')
+janela.geometry('300x200')
+
+texto = ttk.Label(janela,text='Risada Simulator')
+texto.pack(pady=50)
+
+botao = ttk.Button(janela,text='Mostrar favoritos')
+botao.pack(pady=20)
+
+janela.mainloop()

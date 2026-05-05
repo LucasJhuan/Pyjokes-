@@ -17,3 +17,39 @@ botao = ttk.Button(janela,text='Mostrar favoritos')
 botao.pack(pady=20)
 
 janela.mainloop()
+
+
+
+
+
+
+
+
+
+from tkinter import *
+from tkinter import ttk
+import pyjokes
+
+def fazer_rir():
+    # 1. Gera uma piada aleatória
+    nova_piada = pyjokes.get_joke()
+    # 2. Muda o texto da nossa Label
+    texto_piada.config(text=nova_piada)
+
+root = Tk()
+root.title("Gerador de Piadas")
+
+frm = ttk.Frame(root, padding=20)
+frm.grid()
+
+# Criamos a Label primeiro e guardamos numa variável para poder mudar o texto depois
+texto_piada = ttk.Label(frm, text="Clique no botão para rir!", wraplength=300)
+texto_piada.grid(column=0, row=0, pady=10)
+
+# Botão "Me faça rir" - Note que passamos 'command=fazer_rir' sem os parênteses ()
+ttk.Button(frm, text="Me faça rir!", command=fazer_rir).grid(column=0, row=1)
+
+# Botão de Sair
+ttk.Button(frm, text="Sair", command=root.destroy).grid(column=0, row=2, pady=5)
+
+root.mainloop()

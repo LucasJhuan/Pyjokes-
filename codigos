@@ -25,7 +25,7 @@ janela.mainloop()
 
 
 
-
+#-Botão de hahahar piadas
 from tkinter import *
 from tkinter import ttk
 import pyjokes
@@ -53,3 +53,35 @@ ttk.Button(frm, text="Me faça rir!", command=fazer_rir).grid(column=0, row=1)
 ttk.Button(frm, text="Sair", command=root.destroy).grid(column=0, row=2, pady=5)
 
 root.mainloop()
+
+
+#logica
+import tkinter as tk
+import pyjokes as pj
+
+#comando de gerar piada
+piada = pj.get_joke()
+
+#lista favoritos
+favoritos = []
+
+#loop principal
+while True:
+    piadoca = str(input('Gerar piada?(s ou n): ')).lower()
+    
+    if (piadoca == 'n'):
+        break
+
+    if (piadoca == 's'):
+        print(piada)
+
+        questao = str(input('Deseja favoritar esta grande piada?:(s ou n) ')).lower()
+
+        if (questao == 's'):
+            favoritos.append(piada)
+        
+        else:
+            continue
+
+
+print(f'Piadas favoritas: {favoritos}')

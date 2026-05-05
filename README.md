@@ -10,4 +10,4 @@ Documento biblioteca pyjokes
 https://pypi.org/project/pyjokes/
 
 Código
-https://organic-fishstick-7v9rpqgw96xp2w6qj.github.dev/](https://prod.liveshare.vsengsaas.visualstudio.com/join?315A600FBDF1AB9C4A825A6E0FC2DF819FC9)
+[https://organic-fishstick-7v9rpqgw96xp2w6qj.github.dev/](https://prod.liveshare.vsengsaas.visualstudio.com/join?315A600FBDF1AB9C4A825A6E0FC2DF819FC9)](https://prod.liveshare.vsengsaas.visualstudio.com/join?17153A0BEAAE485885CAFC23A0DC9653F0F2)

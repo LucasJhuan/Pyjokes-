@@ -32,6 +32,46 @@ resultado = translator.translate("Hello world", dest='pt')
 print(resultado.text)
 
 
+
+
+
+
+
+Para aplicar a fonte nos botões, você usa o mesmo argumento font que usaria em um Label. A diferença é que você precisa garantir que a fonte seja definida depois do root, como corrigimos no erro anterior.
+Aqui estão as duas formas de fazer isso:
+## 1. Aplicando diretamente (Tupla)
+Se você quer algo rápido e não vai repetir muito essa fonte:
+
+import tkinter as tk
+root = tk.Tk()
+# Criando o botão com a fonte via tuplabtn_sair = tk.Button(root, text="Sair", font=("Arial", 14, "bold"), command=root.destroy)
+btn_sair.pack(pady=20)
+
+root.mainloop()
+
+## 2. Usando o objeto de fonte (Recomendado)
+Se você criou um objeto minha_fonte para padronizar o app, basta passá-lo para o botão. Assim, se você mudar o tamanho na variável, todos os botões mudam juntos:
+
+import tkinter as tkfrom tkinter import font
+root = tk.Tk()
+# Define a fonte uma única vezfonte_botao = font.Font(family="Verdana", size=12, weight="bold")
+# Aplica a mesma variável em vários botõesbtn1 = tk.Button(root, text="Confirmar", font=fonte_botao)btn2 = tk.Button(root, text="Cancelar", font=fonte_botao)
+
+btn1.pack(side="left", padx=10)
+btn2.pack(side="left", padx=10)
+
+root.mainloop()
+
+## Por que meu botão não mudou de cor ou estilo?
+No Windows, o botão padrão do Tkinter às vezes ignora certas estilizações (como bordas ou cores de fundo muito específicas) para manter o visual do sistema operacional. No entanto, a fonte (tamanho e tipo) sempre deve funcionar.
+Dica Extra: Se você quiser que o texto do botão fique colorido junto com a fonte, adicione o argumento fg (foreground):
+
+tk.Button(root, text="Colorido", font=fonte_botao, fg="blue")
+
+Você gostaria de ver como mudar a cor de fundo do botão quando o mouse passa por cima dele?
+
+
+
 from tkinter import font
 
 # Criando um objeto de fonte reutilizável

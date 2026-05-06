@@ -1,25 +1,31 @@
 import pyjokes as pj
 import tkinter as tk
+import deep_translator
 from tkinter import *
 from tkinter import ttk
+from deep_translator import GoogleTranslator
 
 #lista favoritos
 favoritos = []
 
 #gera uma piada aleatória
-def risada():
-    global piada
-    piada = pj.get_joke()
-    texto.config(text=piada)
-    msg.config(text='')
 
+def risada():
+    global piada_en
+    global traducao
+    piada_en = pj.get_joke()
+    traducao = GoogleTranslator(source='en', target='pt').translate(piada_en)
+    texto.config(text=traducao)
+    msg.config(text='')
+    traducao = GoogleTranslator(source='en', target='pt').translate(piada_en)
+   
 #favoritar a piada atual
 def favoritar():
-    if (piada in favoritos):
+    if (traducao in favoritos):
         msg.config(text='Piada ja esta favoritada')
     
     else:
-        favoritos.append(piada)
+        favoritos.append(traducao)
         msg.config(text='Piada Favoritada')
 
 

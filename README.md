@@ -37,17 +37,7 @@ print(resultado.text)
 
 
 
-Para aplicar a fonte nos botões, você usa o mesmo argumento font que usaria em um Label. A diferença é que você precisa garantir que a fonte seja definida depois do root, como corrigimos no erro anterior.
-Aqui estão as duas formas de fazer isso:
-## 1. Aplicando diretamente (Tupla)
-Se você quer algo rápido e não vai repetir muito essa fonte:
 
-import tkinter as tk
-root = tk.Tk()
-# Criando o botão com a fonte via tuplabtn_sair = tk.Button(root, text="Sair", font=("Arial", 14, "bold"), command=root.destroy)
-btn_sair.pack(pady=20)
-
-root.mainloop()
 
 ## 2. Usando o objeto de fonte (Recomendado)
 Se você criou um objeto minha_fonte para padronizar o app, basta passá-lo para o botão. Assim, se você mudar o tamanho na variável, todos os botões mudam juntos:

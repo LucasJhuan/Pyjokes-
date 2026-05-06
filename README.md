@@ -30,65 +30,6 @@ from googletrans import Translator
 translator = Translator()
 resultado = translator.translate("Hello world", dest='pt')
 print(resultado.text)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import tkinter as tk
 import pyjokes
 from deep_translator import GoogleTranslator

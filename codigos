@@ -85,3 +85,9 @@ while True:
 
 
 print(f'Piadas favoritas: {favoritos}')
+
+
+estilo do botao
+
+style = ttk.Style()
+style.configure("TButton", font=("Helvetica", 16, "italic"))

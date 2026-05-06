@@ -91,3 +91,8 @@ estilo do botao
 
 style = ttk.Style()
 style.configure("TButton", font=("Helvetica", 16, "italic"))
+background="seagreen",      # Cor de fundo
+foreground="black",         # Cor do texto
+borderwidth=5,              # Espessura da borda
+bordercolor="darkgreen",    # Cor da borda
+relief="raised")            # Estilo visual (flat, raised, sunken))

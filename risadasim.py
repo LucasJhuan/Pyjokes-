@@ -32,6 +32,8 @@ def favoritados():
     #texto piadas favoritas
     for i in favoritos:
         ttk.Label(favoritados, text = i, wraplength=600).pack(pady=10)
+    
+    ttk.Button(favoritados,text='Sair', command=favoritados.destroy).pack(pady=10)
 
 
 #janela
@@ -48,6 +50,13 @@ msg.pack(pady=10)
 #botões
 ttk.Button(janela, text="Me faça rir!", command=risada).pack(pady=20)
 
+ttk.Button(janela,text='Favoritar', command=favoritar).pack(pady=10)
+
+ttk.Button(janela,text='Mostrar favoritos', command=favoritados).pack(pady=10)
+
+ttk.Button(janela,text='Sair', command=janela.destroy).pack(pady=10)
+
+janela.mainloop()
 ttk.Button(janela,text='Favoritar', command=favoritar).pack(pady=10)
 
 ttk.Button(janela,text='Mostrar favoritos', command=favoritados).pack(pady=10)

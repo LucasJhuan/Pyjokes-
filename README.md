@@ -26,6 +26,11 @@ Código
 
 
 
+from googletrans import Translator
+translator = Translator()
+resultado = translator.translate("Hello world", dest='pt')
+print(resultado.text)
+
 
 from tkinter import font
 

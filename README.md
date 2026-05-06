@@ -39,6 +39,94 @@ print(resultado.text)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import tkinter as tk
+import pyjokes
+from deep_translator import GoogleTranslator
+
+def gerar_piada():
+    try:
+        # 1. Pega a piada em inglês
+        piada_en = pyjokes.get_joke()
+        
+        # 2. Traduz para Português
+        traducao = GoogleTranslator(source='en', target='pt').translate(piada_en)
+        
+        # 3. Atualiza o Label no Tkinter
+        label_piada.config(text=traducao)
+    except Exception as e:
+        label_piada.config(text="Erro de conexão (Internet necessária)")
+
+# Configuração Básica Tkinter
+root = tk.Tk()
+root.geometry("400x300")
+
+label_piada = tk.Label(root, text="Clique para traduzir uma piada", wraplength=350, font=("Arial", 12))
+label_piada.pack(pady=50)
+
+btn = tk.Button(root, text="Nova Piada", command=gerar_piada)
+btn.pack()
+
+root.mainloop()
+
+
+
+
+
+
+
+
+
+
 ## 2. Usando o objeto de fonte (Recomendado)
 Se você criou um objeto minha_fonte para padronizar o app, basta passá-lo para o botão. Assim, se você mudar o tamanho na variável, todos os botões mudam juntos:
 

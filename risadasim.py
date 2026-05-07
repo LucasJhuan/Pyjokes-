@@ -1,15 +1,15 @@
 import pyjokes as pj
 import tkinter as tk
-import deep_translator
+import deep_translator #lembre de instalar (esse tradutor leva um tempinho pra traduzir dps q aperta o botao)
 from tkinter import *
 from tkinter import ttk
+from tkinter import font
 from deep_translator import GoogleTranslator
 
 #lista favoritos
 favoritos = []
 
 #gera uma piada aleatória
-
 def risada():
     global piada_en
     global traducao
@@ -28,12 +28,12 @@ def favoritar():
         favoritos.append(traducao)
         msg.config(text='Piada Favoritada')
 
-
 #janela favoritados
 def favoritados():
-    favoritados = tk.Tk()
+    favoritados = tk.Toplevel()
     favoritados.title('Piadas Favoritadas')
-    favoritados.geometry('700x500')
+    favoritados.geometry('800x600')
+    favoritados.configure(bg="#F5F36D")
 
     #texto piadas favoritas
     for i in favoritos:
@@ -45,7 +45,13 @@ def favoritados():
 #janela
 janela = tk.Tk()
 janela.title('Risada Simulator')
-janela.geometry('700x500')
+janela.geometry('800x600')
+janela.configure(bg="#F5F36D")
+
+#estilização de fontes
+style = ttk.Style()
+style.configure("TButton", font=('Georgia', 12, 'italic'), background="#10837F", foreground="#000000")
+style.configure("TLabel",font=('Georgia', 16), background="#F5F36D", foreground="#000000")
 
 #texto
 texto = ttk.Label(janela,text='Risada Simulator', wraplength=600)
@@ -61,10 +67,5 @@ ttk.Button(janela,text='Favoritar', command=favoritar).pack(pady=10)
 ttk.Button(janela,text='Mostrar favoritos', command=favoritados).pack(pady=10)
 
 ttk.Button(janela,text='Sair', command=janela.destroy).pack(pady=10)
-
-janela.mainloop()
-ttk.Button(janela,text='Favoritar', command=favoritar).pack(pady=10)
-
-ttk.Button(janela,text='Mostrar favoritos', command=favoritados).pack(pady=10)
 
 janela.mainloop()
